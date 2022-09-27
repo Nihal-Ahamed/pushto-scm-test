@@ -1,0 +1,222 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "APIwiz - ***Don't Modify**",
+    "description" : "dummy",
+    "version" : "2.0"
+  },
+  "servers" : [ {
+    "url" : "https://gcp-api.apiwiz.io/"
+  } ],
+  "tags" : [ {
+    "name" : "Virtualisation",
+    "description" : "dummy"
+  }, {
+    "name" : "Videos",
+    "description" : "dummy"
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "tags" : [ "Virtualisation" ],
+        "summary" : "New Request123456777",
+        "description" : "dummy",
+        "operationId" : "New Request123456777"
+      }
+    },
+    "/itorix-resources/videos/" : {
+      "get" : {
+        "tags" : [ "APIwiz - ***Don't Modify**" ],
+        "summary" : "getVideos",
+        "description" : "dummy",
+        "operationId" : "getVideos",
+        "responses" : {
+          "200" : {
+            "description" : "Response for endpoint GET-itorix-resources/videos/",
+            "headers" : {
+              "date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "x-envoy-upstream-service-time" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "vary" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "required" : [ "category", "name", "summary", "url" ],
+                    "type" : "object",
+                    "properties" : {
+                      "name" : {
+                        "type" : "string"
+                      },
+                      "summary" : {
+                        "type" : "string"
+                      },
+                      "category" : {
+                        "type" : "string"
+                      },
+                      "url" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/login" : {
+      "post" : {
+        "tags" : [ "APIwiz - ***Don't Modify**" ],
+        "summary" : "Login Test",
+        "description" : "dummy",
+        "operationId" : "Login Test",
+        "parameters" : [ {
+          "name" : "Content-Type",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "application/json"
+        }, {
+          "name" : "x-apikey",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "XeX0u28Ya1a3CBm5tihMQFteeA6fZTy8avUIsJ0WnNOaEAM90Hcv9G2xo5z5hI4WMyHffxTAbP2LcXK4u6n5Pw=="
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "required" : [ "loginId", "password", "workspaceId" ],
+                "type" : "object",
+                "properties" : {
+                  "loginId" : {
+                    "type" : "string"
+                  },
+                  "password" : {
+                    "type" : "string"
+                  },
+                  "workspaceId" : {
+                    "type" : "string"
+                  }
+                },
+                "additionalProperties" : {
+                  "type" : "object"
+                },
+                "description" : "Request Body"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "400" : {
+            "description" : "Response for endpoint POST-/users/login",
+            "headers" : {
+              "date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "connection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Response for endpoint POST-/users/login",
+            "headers" : {
+              "date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "content-length" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "connection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "Request Body"
+      }
+    }
+  },
+  "components" : { },
+  "x-original-swagger-version" : "2.0"
+}
