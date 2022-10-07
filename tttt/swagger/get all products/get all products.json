@@ -1,0 +1,150 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "get all products",
+    "description" : "New Collection",
+    "version" : "2.0"
+  },
+  "servers" : [ {
+    "url" : "https://dummyjson.com/products",
+    "x-name" : "Server1"
+  } ],
+  "paths" : {
+    "/" : {
+      "get" : {
+        "tags" : [ "get all products" ],
+        "summary" : "Get product with query params",
+        "description" : "dummy",
+        "operationId" : "Get product with query params",
+        "parameters" : [ {
+          "name" : "skip",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "5"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "10"
+        } ]
+      },
+      "post" : {
+        "tags" : [ "get all products" ],
+        "summary" : "Post with body raw xml",
+        "description" : "dummy",
+        "operationId" : "Post with body raw xml",
+        "parameters" : [ {
+          "name" : "Content-Type",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "application/json"
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "required" : [ "body" ],
+                "type" : "object",
+                "properties" : {
+                  "body" : {
+                    "required" : [ "data" ],
+                    "type" : "object",
+                    "properties" : {
+                      "data" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                },
+                "additionalProperties" : {
+                  "type" : "object"
+                },
+                "description" : "Request Body"
+              }
+            }
+          },
+          "required" : false
+        },
+        "x-codegen-request-body-name" : "Request Body"
+      }
+    },
+    "/add" : {
+      "post" : {
+        "tags" : [ "get all products" ],
+        "summary" : "Post product with json body",
+        "description" : "dummy",
+        "operationId" : "Post product with json body",
+        "parameters" : [ {
+          "name" : "Content-Type",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "application/json"
+        } ],
+        "requestBody" : {
+          "content" : {
+            "*/*" : {
+              "schema" : {
+                "required" : [ "brand", "category", "description", "discountPercentage", "images", "price", "rating", "stock", "thumbnail", "title" ],
+                "type" : "object",
+                "properties" : {
+                  "title" : {
+                    "type" : "string"
+                  },
+                  "description" : {
+                    "type" : "string"
+                  },
+                  "price" : {
+                    "type" : "integer"
+                  },
+                  "discountPercentage" : {
+                    "type" : "number"
+                  },
+                  "rating" : {
+                    "type" : "number"
+                  },
+                  "stock" : {
+                    "type" : "integer"
+                  },
+                  "brand" : {
+                    "type" : "string"
+                  },
+                  "category" : {
+                    "type" : "string"
+                  },
+                  "thumbnail" : {
+                    "type" : "string"
+                  },
+                  "images" : {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "string"
+                    }
+                  }
+                },
+                "additionalProperties" : {
+                  "type" : "object"
+                },
+                "description" : "Request Body"
+              }
+            }
+          },
+          "required" : false
+        },
+        "x-codegen-request-body-name" : "Request Body"
+      }
+    }
+  },
+  "components" : { },
+  "x-original-swagger-version" : "2.0",
+  "tags" : [ ],
+  "security" : [ ],
+  "x-mock" : true
+}
