@@ -1,0 +1,148 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "test collcetion",
+    "description" : "test",
+    "version" : "2.0"
+  },
+  "servers" : [ {
+    "url" : "https://petstore.swagger.io/v2",
+    "x-name" : "Server1"
+  } ],
+  "tags" : [ {
+    "name" : "test request",
+    "description" : "test"
+  } ],
+  "paths" : {
+    "/pet/findByStatus" : {
+      "get" : {
+        "tags" : [ "test request" ],
+        "summary" : "New Request",
+        "description" : "dummy",
+        "operationId" : "New Request",
+        "parameters" : [ {
+          "name" : "status",
+          "in" : "query",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "available"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Response for endpoint GET-/pet/findByStatus",
+            "headers" : {
+              "Transfer-Encoding" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Server" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Origin" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Methods" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Connection" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Date" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Headers" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Content-Type" : {
+                "description" : "response header",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "*/*" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "required" : [ "id", "photoUrls", "status", "tags" ],
+                    "type" : "object",
+                    "properties" : {
+                      "id" : {
+                        "type" : "integer"
+                      },
+                      "category" : {
+                        "required" : [ "id", "name" ],
+                        "type" : "object",
+                        "properties" : {
+                          "id" : {
+                            "type" : "integer"
+                          },
+                          "name" : {
+                            "type" : "string"
+                          }
+                        }
+                      },
+                      "name" : {
+                        "type" : "string"
+                      },
+                      "photoUrls" : {
+                        "type" : "array",
+                        "items" : {
+                          "type" : "string"
+                        }
+                      },
+                      "tags" : {
+                        "type" : "array",
+                        "items" : {
+                          "required" : [ "id", "name" ],
+                          "type" : "object",
+                          "properties" : {
+                            "id" : {
+                              "type" : "integer"
+                            },
+                            "name" : {
+                              "type" : "string"
+                            }
+                          }
+                        }
+                      },
+                      "status" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : { },
+  "x-original-swagger-version" : "2.0",
+  "security" : [ ],
+  "x-mock" : true
+}
