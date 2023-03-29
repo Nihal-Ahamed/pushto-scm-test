@@ -1,0 +1,110 @@
+{
+  "id" : "6423e4aa6ecc513ed4d92649",
+  "cts" : 1680073898287,
+  "createdUserName" : "Nihal Ahamed",
+  "mts" : 1680073898287,
+  "apiId" : "6423e4aa6ecc513ed4d92648",
+  "revisionId" : "6423e4aa6ecc513ed4d92647",
+  "name" : "account-api-version",
+  "displayName" : "account api version",
+  "description" : "",
+  "apiRevision" : 1,
+  "apiVersion" : 1,
+  "protocols" : [ "https" ],
+  "serviceUrl" : "https://mock.apiwiz.io",
+  "path" : "/v1/accounts/test",
+  "subscriptionKeyParameterNames" : {
+    "header" : "Ocp-Apim-Subscription-Key",
+    "query" : "subscription-key"
+  },
+  "subscriptionRequired" : false,
+  "contact" : {
+    "email" : "apiteam@swagger.io"
+  },
+  "license" : {
+    "name" : "Apache 2.0",
+    "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+  },
+  "termsOfServiceUrl" : "http://swagger.io/terms/",
+  "tags" : [ ],
+  "isCurrent" : true,
+  "isOnline" : true,
+  "apiOperations" : [ {
+    "name" : "postGroupstash",
+    "displayName" : "postGroupstash",
+    "method" : "post",
+    "urlTemplate" : "/groupstash",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "putGroupstash",
+    "displayName" : "putGroupstash",
+    "method" : "put",
+    "urlTemplate" : "/groupstash",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "postCreateAccount",
+    "displayName" : "postCreateAccount",
+    "method" : "post",
+    "urlTemplate" : "/account",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "getBlog",
+    "displayName" : "getBlog",
+    "method" : "get",
+    "urlTemplate" : "/account",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "postEmailtdCert",
+    "displayName" : "postEmailtdCert",
+    "method" : "post",
+    "urlTemplate" : "/emailtdcert",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "getTransaction",
+    "displayName" : "getTransaction",
+    "method" : "get",
+    "urlTemplate" : "/tsa/transactions",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "getAccountInfo",
+    "displayName" : "getAccountInfo",
+    "method" : "get",
+    "urlTemplate" : "/infoo",
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  } ],
+  "policies" : [ ],
+  "buildProgress" : "SCHEDULED",
+  "connector" : {
+    "id" : "641bf53a697d792f4f59d070",
+    "cts" : 1679553848474,
+    "createdUserName" : "Nihal Ahamed",
+    "mts" : 1679988456880,
+    "connectorName" : "DevTest",
+    "host" : "apiwiz-management.management.azure-api.net",
+    "subscriptionId" : "8dc688ee-146f-4a3f-832b-5b0eca32f812",
+    "resourceGroup" : "apiwiz",
+    "serviceName" : "apiwiz-management"
+  },
+  "enableScmUpload" : true,
+  "scmUpload" : {
+    "branch" : "main",
+    "hostUrl" : "https://github.com/Nihal-Ahamed/pushto-scm-test",
+    "folderName" : "foler",
+    "commitMessage" : "commit",
+    "scmSource" : "git"
+  }
+}
