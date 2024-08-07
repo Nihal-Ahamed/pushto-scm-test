@@ -1,0 +1,1 @@
+{"asdf":{"type":"object","properties":{"address":{"format":"","$ref":"#/definitions/string"}}},"definitions":{}}
